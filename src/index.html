@@ -1,175 +1,315 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+  <!-- Head -->
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap w/ Vite</title>
     <script type="module" src="./js/main.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Inter&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body
+  <!-- End head -->
 
-    <div class="container"> 
-        <header 
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-        > 
-            <div class="col-md-3 mb-2 mb-md-0"> 
-                Developer X
-            </div> 
-            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2">Home</a></li>
-                <li><a href="#" class="nav-link px-2 link-secondary">About</a></li>
-                <li><a href="#" class="nav-link px-2 link-secondary">Projects</a></li>
-                <li><a href="#" class="nav-link px-2 link-secondary">Contact</a></li>
-            </ul> 
-            <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-primary">Book a demo</button>
-            </div> 
-        </header> 
-    </div>
-    
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">Alex Cortes Garcia</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="mb-4 text-secondary">
-        Ingeniero de Software Full-Stack Senior con 6 años de experiencia entregando soluciones de alto rendimiento para empresas nacionales e internacionales. Mi stack me posiciona como experto en la construcción de plataformas escalables con Laravel (PHP), NestJS (Node.js) y React/TypeScript.
-      </p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+  <body>
+    <div class="finisher-header">
+      <div class="container">
+        <header
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+        >
+          <div class="col-md-3 mb-2 mb-md-0">Developer X</div>
+          <ul
+            class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li><a href="#" class="nav-link px-2">Home</a></li>
+            <li><a href="#" class="nav-link px-2 link-secondary">About</a></li>
+            <li>
+              <a href="#" class="nav-link px-2 link-secondary">Projects</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-2 link-secondary">Contact</a>
+            </li>
+          </ul>
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-primary">Book a demo</button>
+          </div>
+        </header>
+
+        <section class="px-4 pt-5 my-5 text-center">
+          <h1 class="display-5">Hello, I'm Alex</h1>
+          <h1 class="display-2 fw-bold">Full Stack Developer</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="mb-4">
+              Ingeniero de Software Full-Stack Senior con 6 años de experiencia
+              entregando soluciones de alto rendimiento para empresas nacionales
+              e internacionales. Mi stack me posiciona como experto en la
+              construcción de plataformas escalables con Laravel (PHP), NestJS
+              (Node.js) y React/TypeScript.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-5">
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-lg px-4"
+              >
+                 Contact me
+              </button>
+            </div>
+          </div>
+          <div class="overflow-hidden" style="max-height: 30vh">
+            <div class="container px-5 text-center">
+              <ul class="nav list-unstyled d-flex justify-content-center h1">
+                <li class="ms-3">
+                  <a
+                    class="text-white"
+                    target="_blank"
+                    href="https://github.com/AlexByte18"
+                  >
+                    <ion-icon name="logo-github"></ion-icon>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    class="text-white"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/alex-garcia-802683125/"
+                  >
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+                <li class="ms-3">
+                  <a
+                    class="text-white"
+                    target="_blank"
+                    href="https://codepen.io/your-work"
+                  >
+                    <ion-icon name="logo-codepen"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
-      <div class="container px-5">
-        <img src="bootstrap-docs.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-      </div>
-    </div>
-  </div>
 
-    <section class="container">
-        <h2>Portfolio</h2>
-        <p></p>
+    <section class="container" style="margin-top: 15rem; margin-bottom: 10rem;">
+      <h2 class="display-3 text-center mb-5">About me</h2>
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <p class="text-center">
+            Me especializo en manejar el ciclo de vida completo del desarrollo de software, desde la abstracción de requerimientos de negocio, la definición de soluciones técnicas y la mentoría de equipos. Mi experiencia abarca el desarrollo de APIs RESTful para proyectos diversos (e-learning, e-commerce, sistemas de inventarios), utilizando bases de datos relacionales y NoSQL (MySQL, MongoDB y PostgreSQL) y procesamiento asíncrono (Queues). Mi enfoque está en la eficiencia y la calidad, destacando por la optimización de consultas SQL complejas, la adopción de buenas prácticas de arquitectura y el testing automatizado exhaustivo (E2E y Unitario).
+          </p>
+        </div>
+      </div>
+
     </section>
 
-    <section class="container">
-      <div class="row">
+    <section class="container mt-5">
+      <h2 class="display-3 text-center mb-5">Recent works</h2>
+      <div class="row mb-5">
         <div class="col-6">
-
           <article class="card shadow text-white border-0 w-100">
-            <div class="card-header bg-transparent border-0 d-flex gap-2 justify-content-end pt-3 pb-0">
+            <div
+              class="card-header bg-transparent border-0 d-flex gap-2 justify-content-end pt-3 pb-0"
+            >
               <h4 class="btn btn-sm btn-secondary m-0">React Native</h4>
               <h4 class="btn btn-sm btn-secondary m-0">Tailwind</h4>
             </div>
             <div class="card-body">
               <h2>Artisan App</h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
-            <img src="https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg" class="card-img-bottom" alt="...">
+            <img
+              src="https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg"
+              class="card-img-bottom"
+              alt="..."
+            />
           </article>
         </div>
 
         <div class="col-6">
-            <article class="card shadow text-white border-0 w-100">
-            <div class="card-header bg-transparent border-0 d-flex gap-2 justify-content-end pt-3 pb-0">
+          <article class="card shadow text-white border-0 w-100">
+            <div
+              class="card-header bg-transparent border-0 d-flex gap-2 justify-content-end pt-3 pb-0"
+            >
               <h4 class="btn btn-sm btn-secondary m-0">Nest.js</h4>
               <h4 class="btn btn-sm btn-secondary m-0">Typescript</h4>
             </div>
             <div class="card-body">
               <h2>Artisan API</h2>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
             </div>
-            <img src="https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg" class="card-img-bottom" alt="...">
+            <img
+              src="https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg"
+              class="card-img-bottom"
+              alt="..."
+            />
           </article>
         </div>
+      </div>
 
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <article class="card shadow text-white border-0 w-100">
+            <div
+              class="card-header bg-transparent border-0 d-flex gap-2 justify-content-end pt-3 pb-0"
+            >
+              <h4 class="btn btn-sm btn-primary m-0">React</h4>
+              <h4 class="btn btn-sm btn-primary m-0">Radix UI</h4>
+              <h4 class="btn btn-sm btn-primary m-0">Zustand</h4>
+            </div>
+            <div class="card-body">
+              <h2>Artisan Dashboard</h2>
+              <p class="card-text">
+                Modern administrative dashboard for product management and
+                authentication. Built with React 19, TypeScript, Tailwind CSS,
+                and Vite.
+              </p>
+            </div>
+            <img
+              src="https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg"
+              class="card-img-bottom"
+              alt="..."
+            />
+          </article>
+        </div>
       </div>
     </section>
 
-
-    
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
-        <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-      </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form class="p-4 p-md-5 border rounded-3 bg-light">
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-          </div>
-          <div class="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-          <hr class="my-4">
-          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-        </form>
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">
+            Vertically centered hero sign-up form
+          </h1>
+          <p class="col-lg-10 fs-4">
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can
+            be triggered by attempting to submit the form without completing it.
+          </p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-light">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me" /> Remember me
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">
+              Sign up
+            </button>
+            <hr class="my-4" />
+            <small class="text-muted"
+              >By clicking Sign up, you agree to the terms of use.</small
+            >
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-<div class="container bg-dark">
-  <footer class="py-3 my-4 border-top">
-    <div class="row py-5">
-        <div class="col-md-6">
-    <article>
-        <h3>Alex Cortes Garcia</h3>
-        <h4>Full stack develor</h4>
-    </article>
-       <ul class="nav list-unstyled d-flex">
-        <li class="ms-3">
-            <a class="text-muted" href="#">
-            <ion-icon name="logo-github"></ion-icon>
-            </a>
-        </li>
-        <li class="ms-3">
-            <a class="text-muted" href="#">
-            <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-        </li>
-        <li class="ms-3">
-            <a class="text-muted" href="#">
-            <ion-icon name="logo-codepen"></ion-icon>
-            </a>
-        </li>
-        </ul>
-    </div>
-    <div class="col-6">
-        <article class="d-flex gap-3">
-            <h3>Get in touch </h3>
-            <ion-icon name="arrow-forward-outline" size="large"></ion-icon>
-        </article>
-        <div class="row">
-            <article class="col">
+    <div class="container bg-dark">
+      <footer class="py-3 my-4 border-top">
+        <div class="row py-5">
+          <div class="col-md-6">
+            <article>
+              <h3>Alex Cortes Garcia</h3>
+              <h4>Full stack develor</h4>
+            </article>
+            <ul class="nav list-unstyled d-flex">
+              <li class="ms-3">
+                <a
+                  class="text-muted"
+                  target="_blank"
+                  href="https://github.com/AlexByte18"
+                >
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </li>
+              <li class="ms-3">
+                <a
+                  class="text-muted"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/alex-garcia-802683125/"
+                >
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+              <li class="ms-3">
+                <a
+                  class="text-muted"
+                  target="_blank"
+                  href="https://codepen.io/your-work"
+                >
+                  <ion-icon name="logo-codepen"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <article class="d-flex gap-3">
+              <h3>Get in touch</h3>
+              <ion-icon name="arrow-forward-outline" size="large"></ion-icon>
+            </article>
+            <div class="row">
+              <article class="col">
                 <h5>EMAIL ME:</h5>
                 <a href="">contatt@gmail.com</a>
-            </article>
-            <article class="col">
+              </article>
+              <article class="col">
                 <h5>CALL ME:</h5>
                 <a href="">(951) 292 55 60</a>
-            </article>
+              </article>
+            </div>
+          </div>
         </div>
+        <div class="text-center border-top p-3">
+          <span class="text-muted"
+            >© 2021 Company, Inc <ion-icon name="heart"></ion-icon
+          ></span>
+        </div>
+      </footer>
     </div>
-    </div>
-    <div class="text-center border-top p-3">
-        <span class="text-muted">© 2021 Company, Inc <ion-icon name="heart"></ion-icon></span>
-    </div>
-    
-</footer>
-</div>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="./js/finisher-header.es5.min.js"
+      type="text/javascript"
+    ></script>
   </body>
 </html>
