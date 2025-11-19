@@ -1,0 +1,54 @@
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$primary: #0266dcff;
+$secondary: #5a697fff;
+$dark: #1b1e23ff;
+$gray: #2d333fff;
+
+$card-bg: $gray;
+$card-border-radius: 1rem;
+$card-inner-border-radius: 1rem;
+
+$font-family-sans-serif: "Inter", sans-serif;
+$headings-font-family: "Roboto Condensed", sans-serif;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $grays);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "bootstrap/scss/utilities/api";
+
+
+.card {
+
+  --#{$prefix}card-bg: #{$card-bg};
+  --#{$prefix}card-border-radius: #{$card-border-radius};
+  -#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
+}
