@@ -1,0 +1,57 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Vite cache
+/.vite/
+
+# Environment variables (local overrides / secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+Yarn-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test/coverage
+coverage/
+.nyc_output/
+
+# Caches
+.cache/
+.sass-cache/
+.parcel-cache/
+/.cache-loader/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+*.swp
+
+# Optional: IDE local history
+.history/
+
+# Misc
+/.DS_Store
+dist-ssr/
+/.turbo/
