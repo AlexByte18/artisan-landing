@@ -7,7 +7,7 @@
 @import "bootstrap/scss/utilities";
 
 $primary: #0a23d7;
-$secondary: #d2d5da;
+$info: #05F2F2;
 $dark: #00094e;
 $gray: #d2d5da;
 
@@ -20,7 +20,8 @@ $headings-font-family: "Roboto Condensed", sans-serif;
 
 $theme-colors: (
   "primary": $primary,
-  "secondary": $secondary
+  // "secondary": $secondary,
+  "info": $info
 );
 
 
