@@ -42,7 +42,7 @@
 
         <section class="px-4 pt-5 my-5 text-center">
           <h1 class="display-5">Hello, I'm Alex</h1>
-          <h1 class="display-2 fw-bold">Full Stack Developer</h1>
+          <h2 class="display-2 text-info fw-bold">Full Stack Developer</h2>
           <div class="col-lg-6 mx-auto">
             <p class="mb-4">
               Ingeniero de Software Full-Stack Senior con 6 años de experiencia
@@ -54,7 +54,7 @@
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-5">
               <button
                 type="button"
-                class="btn btn-outline-secondary btn-lg px-4"
+                class="btn btn-info btn-lg px-4"
               >
                  Contact me
               </button>
@@ -97,17 +97,143 @@
       </div>
     </div>
 
+    <!-- About -->
     <section class="container" style="margin-top: 15rem; margin-bottom: 10rem;">
       <h2 class="display-3 text-center mb-5">About me</h2>
-      <div class="row justify-content-center">
+      <div class="row justify-content-between">
         <div class="col-6">
-          <p class="text-center">
-            Me especializo en manejar el ciclo de vida completo del desarrollo de software, desde la abstracción de requerimientos de negocio, la definición de soluciones técnicas y la mentoría de equipos. Mi experiencia abarca el desarrollo de APIs RESTful para proyectos diversos (e-learning, e-commerce, sistemas de inventarios), utilizando bases de datos relacionales y NoSQL (MySQL, MongoDB y PostgreSQL) y procesamiento asíncrono (Queues). Mi enfoque está en la eficiencia y la calidad, destacando por la optimización de consultas SQL complejas, la adopción de buenas prácticas de arquitectura y el testing automatizado exhaustivo (E2E y Unitario).
-          </p>
+          <div class="row justify-content-center">
+            <h3 class="">Disponible para nuevos retos | Enfocado en Web & Mobile (React Native)</h3>
+            <p>
+              Me especializo en manejar el ciclo de vida completo del desarrollo de software, desde la abstracción de requerimientos de negocio, la definición de soluciones técnicas y la mentoría de equipos. Mi experiencia abarca el desarrollo de APIs RESTful para proyectos diversos (e-learning, e-commerce, sistemas de inventarios), utilizando bases de datos relacionales y NoSQL (MySQL, MongoDB y PostgreSQL) y procesamiento asíncrono (Queues). Mi enfoque está en la eficiencia y la calidad, destacando por la optimización de consultas SQL complejas, la adopción de buenas prácticas de arquitectura y el testing automatizado exhaustivo (E2E y Unitario).
+            </p>
+          </div>
+      </div>
+      <div class="col-5">
+        <img
+          src="https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg"
+          class="card-img-bottom"
+          alt="..."
+        />
+      </div>
         </div>
       </div>
 
     </section>
+    <!-- End about -->
+
+    <!-- Tech Stack Atom Section -->
+    <section class="container atom-section py-5">
+      <h2 class="display-3 text-center mb-5">My Tech Stack</h2>
+
+      <p>Backend: PHP (Laravel), Node.js (NestJS), Python (Fast API), Go.</p>
+      <p>Frontend & Mobile: React, TypeScript, Vue.js, Tailwind CSS, Bootstrap, React Native.</p>
+      <p>Base de Datos: MySQL, PostgreSQL, MariaDB, MongoDB, DynamoDB</p>
+      <p>Infraestructura & Cloud: AWS (S3, Lambda, CDK, EventBridge), Docker</p>
+      <p>Calidad & Testing: Jest, Supertest, Cypress/E2E, CI/CD pipelines.</p>
+
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <div class="atom-container" id="atomContainer">
+        <!-- Core nucleus -->
+        <div class="atom-core">
+          <div class="core-ring"></div>
+          <div class="core-nucleus">
+            <ion-icon name="flash"></ion-icon>
+          </div>
+        </div>
+
+        <!-- Orbit 1: Backend -->
+        <div class="orbit orbit-1">
+          <div class="electron electron-1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+          </div>
+          <div class="electron electron-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel" title="Laravel">
+          </div>
+          <div class="electron electron-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" alt="NestJS" title="NestJS">
+          </div>
+        </div>
+
+        <!-- Orbit 2: Frontend -->
+        <div class="orbit orbit-2">
+          <div class="electron electron-1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React">
+          </div>
+          <div class="electron electron-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" alt="Vue.js" title="Vue.js">
+          </div>
+          <div class="electron electron-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+          </div>
+        </div>
+
+        <!-- Orbit 3: Tools & DB -->
+        <div class="orbit orbit-3">
+          <div class="electron electron-1">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
+          </div>
+          <div class="electron electron-2">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB">
+          </div>
+          <div class="electron electron-3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" alt="Redis" title="Redis">
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h3 class="text-center">Projects</h3>
+
+      <div class="row justify-content-center">
+        <div class="col-7">
+          <div class="card border-primary mb-3">
+            <div class="card-header">Header</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Proyecto 1: Sistema de Gestión Académica (Serverless)</h5>
+              <p class="card-text">
+                El Reto: Crear una infraestructura capaz de manejar miles de aplicaciones estudiantiles diarias con alta disponibilidad y flujos de trabajo complejos.
+                La Solución: Arquitectura Serverless en AWS. Utilicé **AWS CDK** para infraestructura como código y **NestJS + Lambda** para el procesamiento de eventos. En el frontend, **React + TypeScript** para interfaces intuitivas de gestión.
+                **Tecnologías:** NestJS, AWS Lambda, DynamoDB, React, Jest.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="card border-primary mb-3">
+            <div class="card-header">Header</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Proyecto 2: Plataforma LMS Corporativa</h5>
+              <p class="card-text">
+                **El Reto:** Gestionar capacitaciones empresariales masivas, generación de certificados y reportes de gran volumen de datos sin afectar el rendimiento.
+                **La Solución:** Desarrollo de APIs robustas con **Laravel** y procesamiento asíncrono mediante **Queues** para tareas pesadas. Optimización profunda de consultas SQL en MariaDB para dashboards analíticos en tiempo real.
+                **Tecnologías:** Laravel, Vue.js, MariaDB, AWS S3, SCORM.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="card border-primary mb-3">
+            <div class="card-header">Header</div>
+            <div class="card-body text-primary">
+              <h5 class="card-title">Proyecto 3: EPOS - Gestión de Ventas e Inventario</h5>
+              <p class="card-text">
+                **El Reto:** Modernizar la gestión de inventarios y ventas con una interfaz rápida y altamente reactiva.
+                **La Solución:** Desarrollo de una SPA con **React, Redux Toolkit y TanStack Query** para un manejo de estado eficiente. Backend ágil construido con **Fast API (Python)**.
+                **Tecnologías:** Python, Fast API, React, Tailwind CSS, PostgreSQL.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="container mt-5">
       <h2 class="display-3 text-center mb-5">Recent works</h2>
@@ -186,6 +312,9 @@
         </div>
       </div>
     </section>
+
+
+
 
     <div class="container col-xl-10 col-xxl-8 px-4 py-5">
       <div class="row align-items-center g-lg-5 py-5">
