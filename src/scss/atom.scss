@@ -1,12 +1,18 @@
 .atom-section {
   position: relative;
   padding: 4rem 0;
+  --orbit-1-radius: clamp(80px, 21%, 160px);
+  --orbit-2-radius: clamp(130px, 35%, 260px);
+  --orbit-3-radius: clamp(180px, 50%, 360px);
 }
 
 .atom-container {
   position: relative;
   width: 100%;
-  height: 600px;
+  min-height: 400px;
+  aspect-ratio: 1;
+  max-width: 400px;
+  margin: 0 auto;
   perspective: 1500px;
   display: flex;
   align-items: center;
@@ -64,12 +70,8 @@
 
 .orbit {
   position: absolute;
-  width: 320px;
-  height: 320px;
   left: 50%;
   top: 50%;
-  margin-left: -160px;
-  margin-top: -160px;
   border: 1px solid rgba(0, 255, 240, 0.15);
   border-radius: 50%;
   transform-origin: center center;
@@ -79,28 +81,28 @@
 }
 
 .orbit-1 {
-  width: 320px;
-  height: 320px;
-  margin-left: -160px;
-  margin-top: -160px;
+  width: clamp(160px, 42%, 240px);
+  height: clamp(160px, 42%, 240px);
+  margin-left: calc(clamp(160px, 42%, 240px) / -2);
+  margin-top: calc(clamp(160px, 42%, 240px) / -2);
   border-color: rgba(123, 97, 255, 0.2);
   animation: orbit-1 12s linear infinite;
 }
 
 .orbit-2 {
-  width: 520px;
-  height: 520px;
-  margin-left: -260px;
-  margin-top: -260px;
+  width: clamp(260px, 67%, 390px);
+  height: clamp(260px, 67%, 390px);
+  margin-left: calc(clamp(260px, 67%, 390px) / -2);
+  margin-top: calc(clamp(260px, 67%, 390px) / -2);
   border-color: rgba(0, 255, 240, 0.15);
   animation: orbit-2 15s linear infinite;
 }
 
 .orbit-3 {
-  width: 720px;
-  height: 720px;
-  margin-left: -360px;
-  margin-top: -360px;
+  width: clamp(360px, 92%, 540px);
+  height: clamp(360px, 92%, 540px);
+  margin-left: calc(clamp(360px, 92%, 540px) / -2);
+  margin-top: calc(clamp(360px, 92%, 540px) / -2);
   border-color: rgba(123, 97, 255, 0.1);
   animation: orbit-3 18s linear infinite;
 }
@@ -137,15 +139,15 @@
 
 .electron {
   position: absolute;
-  width: 55px;
-  height: 55px;
+  width: clamp(40px, 8%, 55px);
+  height: clamp(40px, 8%, 55px);
   display: flex;
   align-items: center;
   justify-content: center;
   left: 50%;
   top: 50%;
-  margin-left: -27.5px;
-  margin-top: -27.5px;
+  margin-left: calc(clamp(40px, 8%, 55px) / -2);
+  margin-top: calc(clamp(40px, 8%, 55px) / -2);
   pointer-events: all;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -169,70 +171,60 @@
 .orbit-2 .electron img { animation: counter-rotate-orbit-2 15s linear infinite; }
 .orbit-3 .electron img { animation: counter-rotate-orbit-3 18s linear infinite; }
 
-.orbit-1 .electron-1 { transform: rotateZ(0deg) translateY(-160px); }
-.orbit-1 .electron-2 { transform: rotateZ(120deg) translateY(-160px); }
-.orbit-1 .electron-3 { transform: rotateZ(240deg) translateY(-160px); }
+.orbit-1 .electron-1 { transform: rotateZ(0deg) translateY(calc(var(--orbit-1-radius) * -1)); }
+.orbit-1 .electron-2 { transform: rotateZ(120deg) translateY(calc(var(--orbit-1-radius) * -1)); }
+.orbit-1 .electron-3 { transform: rotateZ(240deg) translateY(calc(var(--orbit-1-radius) * -1)); }
 
-.orbit-2 .electron-1 { transform: rotateZ(0deg) translateY(-260px); }
-.orbit-2 .electron-2 { transform: rotateZ(120deg) translateY(-260px); }
-.orbit-2 .electron-3 { transform: rotateZ(240deg) translateY(-260px); }
+.orbit-2 .electron-1 { transform: rotateZ(0deg) translateY(calc(var(--orbit-2-radius) * -1)); }
+.orbit-2 .electron-2 { transform: rotateZ(120deg) translateY(calc(var(--orbit-2-radius) * -1)); }
+.orbit-2 .electron-3 { transform: rotateZ(240deg) translateY(calc(var(--orbit-2-radius) * -1)); }
 
-.orbit-3 .electron-1 { transform: rotateZ(0deg) translateY(-360px); }
-.orbit-3 .electron-2 { transform: rotateZ(120deg) translateY(-360px); }
-.orbit-3 .electron-3 { transform: rotateZ(240deg) translateY(-360px); }
+.orbit-3 .electron-1 { transform: rotateZ(0deg) translateY(calc(var(--orbit-3-radius) * -1)); }
+.orbit-3 .electron-2 { transform: rotateZ(120deg) translateY(calc(var(--orbit-3-radius) * -1)); }
+.orbit-3 .electron-3 { transform: rotateZ(240deg) translateY(calc(var(--orbit-3-radius) * -1)); }
 
 @media (max-width: 768px) {
-  .atom-container {
-    height: 420px;
+  .atom-section {
+    --orbit-1-radius: clamp(60px, 18%, 80px);
+    --orbit-2-radius: clamp(100px, 30%, 130px);
+    --orbit-3-radius: clamp(140px, 42%, 180px);
   }
 
   .core-nucleus {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .core-nucleus ion-icon {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .electron {
-    width: 45px;
-    height: 45px;
-    margin-left: -22.5px;
-    margin-top: -22.5px;
+    width: clamp(30px, 6%, 40px);
+    height: clamp(30px, 6%, 40px);
+    margin-left: calc(clamp(30px, 6%, 40px) / -2);
+    margin-top: calc(clamp(30px, 6%, 40px) / -2);
   }
 
   .orbit-1 {
-    width: 240px;
-    height: 240px;
-    margin-left: -120px;
-    margin-top: -120px;
+    width: clamp(120px, 30%, 160px);
+    height: clamp(120px, 30%, 160px);
+    margin-left: calc(clamp(120px, 30%, 160px) / -2);
+    margin-top: calc(clamp(120px, 30%, 160px) / -2);
   }
-
-  .orbit-1 .electron-1 { transform: rotateZ(0deg) translateY(-120px); }
-  .orbit-1 .electron-2 { transform: rotateZ(120deg) translateY(-120px); }
-  .orbit-1 .electron-3 { transform: rotateZ(240deg) translateY(-120px); }
 
   .orbit-2 {
-    width: 360px;
-    height: 360px;
-    margin-left: -180px;
-    margin-top: -180px;
+    width: clamp(200px, 50%, 260px);
+    height: clamp(200px, 50%, 260px);
+    margin-left: calc(clamp(200px, 50%, 260px) / -2);
+    margin-top: calc(clamp(200px, 50%, 260px) / -2);
   }
-
-  .orbit-2 .electron-1 { transform: rotateZ(0deg) translateY(-180px); }
-  .orbit-2 .electron-2 { transform: rotateZ(120deg) translateY(-180px); }
-  .orbit-2 .electron-3 { transform: rotateZ(240deg) translateY(-180px); }
 
   .orbit-3 {
-    width: 480px;
-    height: 480px;
-    margin-left: -240px;
-    margin-top: -240px;
+    width: clamp(280px, 70%, 360px);
+    height: clamp(280px, 70%, 360px);
+    margin-left: calc(clamp(280px, 70%, 360px) / -2);
+    margin-top: calc(clamp(280px, 70%, 360px) / -2);
   }
-
-  .orbit-3 .electron-1 { transform: rotateZ(0deg) translateY(-240px); }
-  .orbit-3 .electron-2 { transform: rotateZ(120deg) translateY(-240px); }
-  .orbit-3 .electron-3 { transform: rotateZ(240deg) translateY(-240px); }
 }
 

@@ -1,15 +1,28 @@
-
 @import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
 
-$primary: #0a23d7;
+
+// A. Paleta de Colores "Tech"
+$dark-bg-main:    #0f172a; // Slate 900 (Fondo principal profundo)
+$dark-bg-sub:     #1e293b; // Slate 800 (Para tarjetas/secciones)
+$neon-blue:       #38bdf8; // Sky 400 (Acento principal)
+$neon-green:      #34d399; // Emerald 400 (Para estados/éxito)
+$text-body:       #e2e8f0; // Slate 200 (Texto legible pero no blanco puro)
+$text-muted:      #94a3b8; // Slate 400
+
+// B. Sobrescribir variables de Bootstrap
+$primary:       $neon-blue;
+$success:       $neon-green;
+$body-bg:       $dark-bg-main;
+$body-color:    $text-body;
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif; // Recomendación tipográfica
+
 $info: #05F2F2;
-$dark: #00094e;
-$gray: #d2d5da;
+// $primary: #0a23d7;
+// $dark: #00094e;
+// $gray: #d2d5da;
 
 $card-bg: $dark;
 $card-border-radius: 1rem;
@@ -20,10 +33,9 @@ $headings-font-family: "Roboto Condensed", sans-serif;
 
 $theme-colors: (
   "primary": $primary,
-  // "secondary": $secondary,
-  "info": $info
+  "info": $info,
+  "success": $success,
 );
-
 
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $grays);
 
@@ -44,12 +56,13 @@ $utilities: map-merge(
   )
 );
 
-@import "bootstrap/scss/utilities/api";
+// Habilitar modo oscuro nativo de Bootstrap 5.3+ con nuestros colores
+$enable-dark-mode: true;
+
+// Configuraciones de espaciado y bordes
+$border-radius: 0.5rem;
+$border-radius-lg: 0.75rem;
 
 
-.card {
-
-  --#{$prefix}card-bg: #{$card-bg};
-  --#{$prefix}card-border-radius: #{$card-border-radius};
-  -#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
-}
+$body-bg-dark: $dark-bg-main;
+$body-color-dark: $text-body;
