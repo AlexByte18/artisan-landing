@@ -1,0 +1,19 @@
+.tagcloud {
+  display: inline-block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 20px;
+  width: 100vw !important;
+  height: 720px !important;
+}
+
+.tagcloud--item {
+  cursor: pointer;
+  color: #61dafb;
+  transition: all 0.1s ease;
+}
+
+.tagcloud--item:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #61dafb;
+}
