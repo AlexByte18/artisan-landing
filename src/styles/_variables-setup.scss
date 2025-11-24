@@ -1,0 +1,34 @@
+// custom theme variables
+$dark-bg-main:    #0f172a; // Slate 900
+$dark-bg-sub:     #1e293b; // Slate 800
+$neon-blue:       #38bdf8; // Sky 400
+$neon-green:      #34d399; // Emerald
+$text-body:       #e2e8f0; // Slate 200
+$dark:            #1b1e23ff;
+$info-custom:     #05F2F2;
+
+// $primary: #0a23d7;
+// $dark: #00094e;
+// $gray: #d2d5da;
+
+// override bootstrap variables
+// $primary:       $neon-blue;
+$success:       $neon-green;
+$info:          $info-custom;
+
+$body-bg:       $dark-bg-main;
+$body-color:    $text-body;
+
+// dark mode
+$enable-dark-mode: true;
+$body-bg-dark:     $dark-bg-main;
+$body-color-dark:  $text-body;
+
+// custom styles
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
+$headings-font-family: "Roboto Condensed", sans-serif;
+$card-bg: $dark;
+$card-border-radius: 1rem;
+$card-inner-border-radius: 1rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 0.75rem;

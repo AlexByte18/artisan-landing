@@ -1,10 +1,9 @@
-
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
+@use "sass:map";
+@use "bootstrap/scss/functions" as *;
+@use "bootstrap/scss/variables" as *;
+@use "bootstrap/scss/variables-dark" as *;
+@use "bootstrap/scss/maps" as *;
+@use "bootstrap/scss/utilities" as *;
 
 $primary: #0266dcff;
 $secondary: #5a697fff;
@@ -18,11 +17,13 @@ $card-inner-border-radius: 1rem;
 $font-family-sans-serif: "Inter", sans-serif;
 $headings-font-family: "Roboto Condensed", sans-serif;
 
-$theme-colors: (
-  "primary": $primary,
-  "secondary": $secondary
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $primary,
+    "secondary": $secondary
+  )
 );
-
 
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans, $grays);
 
@@ -34,21 +35,15 @@ $utilities: map-merge(
       (
         values: map-merge(
           map-get(map-get($utilities, "color"), "values"),
-          (
-            $all-colors
-          ),
+          $all-colors
         ),
       ),
     ),
   )
 );
 
-@import "bootstrap/scss/utilities/api";
-
-
 .card {
-
   --#{$prefix}card-bg: #{$card-bg};
   --#{$prefix}card-border-radius: #{$card-border-radius};
-  -#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
+  --#{$prefix}card-inner-border-radius: #{$card-inner-border-radius};
 }

@@ -1,9 +1,25 @@
-// Import all of Bootstrap's CSS
-@import "variables";
-@import "variables-dark";
-@import "bootstrap/scss/bootstrap";
-@import "atom";
+// functions (mandatory first)
+@import "bootstrap/scss/functions";
 
+// custom variables
+@import "variables-setup";
+
+// bootstrap variables
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// maps and mixins
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "utilities-setup";
+
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/utilities/api";
+
+@import "sphere";
+@import "atom";
 
 .ambient-light {
   position: absolute;
@@ -82,6 +98,9 @@
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
     opacity: 0;
