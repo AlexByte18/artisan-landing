@@ -24,19 +24,8 @@ import Footer from '../components/Footer.astro';
   <Footer />
 
   <script>
-    // Initialize AOS (Animate On Scroll)
-    import AOS from 'aos';
-    import 'aos/dist/aos.css';
-
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-
     // Initialize other scripts
     import('../js/main.js').catch(err => console.error('Error loading main.js:', err));
-    import('../js/cards.js').catch(err => console.error('Error loading cards.js:', err));
-    // import('../js/sphere.js').catch(err => console.error('Error loading sphere.js:', err));
     import('../js/three-scene.js').catch(err => console.error('Error loading three-scene.js:', err));
   </script>
 </Layout>
