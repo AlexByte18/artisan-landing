@@ -1,6 +1,6 @@
-import '../scss/custom.scss'
-import '../js/banner.js'
-import '../js/cards.js'
+import './finisher-header.es5.min.js'
+import './banner.js'
+import './cards.js'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import initThree from './three-scene'
