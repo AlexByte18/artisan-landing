@@ -1,0 +1,29 @@
+---
+const { project, class: className } = Astro.props;
+---
+
+<a
+  class={`spotlight-card card shadow text-decoration-none border-0 w-100 ${ className }`}
+  href={ project.link }
+  target="_blank"
+>
+  <div
+    class="card-header bg-transparent border-0 d-flex gap-2 justify-content-end pt-3 pb-0"
+  >
+  {
+    project.tags.map((tag: string) => (
+      <h4 class="badge bg-primary text-white m-0">{ tag }</h4>
+    ))
+  }
+
+  </div>
+  <div class="card-body p-5">
+    <h2 class="text-primary">{ project.title }</h2>
+    <p class="card-text">{ project.description }</p>
+  </div>
+  <img
+    src={ project.image }
+    class="card-img-bottom"
+    alt={ project.title }
+  />
+</a>
