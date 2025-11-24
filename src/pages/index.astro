@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Skills from '../components/Skills.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Alex Cortes - Full Stack Developer">
+  <div>
+    <div class="container">
+      <Header />
+      <Hero />
+    </div>
+  </div>
+
+  <About />
+  <Skills />
+  <Experience />
+  <Projects />
+  <Footer />
+
+  <script>
+    // Initialize AOS (Animate On Scroll)
+    import AOS from 'aos';
+    import 'aos/dist/aos.css';
+
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Initialize other scripts
+    import('../js/main.js').catch(err => console.error('Error loading main.js:', err));
+    import('../js/cards.js').catch(err => console.error('Error loading cards.js:', err));
+    // import('../js/sphere.js').catch(err => console.error('Error loading sphere.js:', err));
+    import('../js/three-scene.js').catch(err => console.error('Error loading three-scene.js:', err));
+  </script>
+</Layout>

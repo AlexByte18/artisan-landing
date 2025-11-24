@@ -1,0 +1,118 @@
+---
+const md = [
+  {
+    title: "TrainHub",
+    tags: ["Serverless", "EdTech"],
+    description: "Plataforma para gestión de capacitaciones empresariales (LMS) Tecnologías: PHP, Laravel, Vue.js, Vuex, Bootstrap, MariaDB, AWS S3, SCORM, Go.",
+    features: ["Laravel Queues", "Dashboards Analytics", "Integración SCORM"],
+  },
+  {
+    title: "Sistema de Gestión Académica",
+    tags: ["Serverless", "EdTech"],
+    description: "Plataforma para gestión de capacitaciones empresariales (LMS) Tecnologías: PHP, Laravel, Vue.js, Vuex, Bootstrap, MariaDB, AWS S3, SCORM, Go.",
+    features: ["Laravel Queues", "Dashboards Analytics", "Integración SCORM"],
+  },
+  {
+    title: "Plataforma para gestión de ventas y el control de inventario (EPOS)",
+    tags: ["Serverless", "EdTech"],
+    description: "Plataforma para gestión de capacitaciones empresariales (LMS) Tecnologías: PHP, Laravel, Vue.js, Vuex, Bootstrap, MariaDB, AWS S3, SCORM, Go.",
+    features: ["Laravel Queues", "Dashboards Analytics", "Integración SCORM"],
+  },
+
+];
+---
+
+<div>
+  <section class="py-5">
+    <div class="container my-5">
+      <h2 class="text-center fw-bold display-5 mb-5">Experience</h2>
+      <div class="row mb-5">
+        <div class="col-12 col-md-4 rounded p-5">
+          <img
+            class="img-fluid w-25 rounded-circle mb-3"
+            src="/images/logo-md.jpeg"
+            alt="mis desarrollos logo"
+          />
+          <span class="d-block">2019 - 2025</span>
+          <h3 class="text-primary my-1">Full Stack Developer</h3>
+          <h5>Mis Desarrollos</h5>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="card spotlight-card p-5">
+            <p>
+              Como Full Stack Developer participé en el desarrollo de múltiples
+              proyectos en los cuales puse a prueba mis conocimientos y mi
+              capacidad de aprendizaje al utilizar múltiples lenguajes,
+              tecnologías y arquitecturas. Estos son los proyecto más
+              desafiantes en los que he participado por su complejidad técnica e
+              impacto.
+            </p>
+
+            <ul class="list-group border-primary list-group-flush">
+              {
+                md.map((item) => (
+                  <li class="list-group-item">
+                    <div class="d-flex justify-content-md-between align-items-center py-2">
+                      <h5 class="text-primary m-0">{item.title}</h5>
+                      <div class="d-flex gap-2">
+                        {item.tags.map((tag) => (
+                          <span class="badge bg-primary mb-1">{tag}</span>
+                        ))}
+                        {/* <span class="badge bg-dark mb-1">EdTech</span> */}
+                      </div>
+                    </div>
+                    <p>{item.description}</p>
+                    <ul class="d-flex gap-3 list-unstyled small text-secondary">
+                      {item.features.map((feature) => (
+                        <li class="mb-2">
+                          <i class="bi bi-check-circle-fill text-success me-2" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 rounded p-5">
+          <img
+            class="img-fluid w-25 rounded-circle mb-3"
+            src="/images/logo-ingenia.png"
+            alt="log ingenia oaxaca"
+          />
+          <span class="d-block">2019 - 2025</span>
+          <h3 class="text-primary my-1">Web Developer</h3>
+          <h5>Ingenia Oaxaca</h5>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="spotlight-card card p-5">
+            <p>
+              Como Web Developer desarrolle blogs personalizados, SPAs y landing
+              pages para startups locales y nacionales.
+            </p>
+
+            <ul>
+              <li>
+                Pagina web para la difusion y publicacion de una revista
+                empresarial.
+              </li>
+
+              <li>
+                Landing page para una empresa comersializadores de mezxcal.
+              </li>
+              <li>
+                Sitema web para la administracion de un equipo de beisbol local
+                para difundir informacion de los miembros del equipo, proximos
+                eventos y productos.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
