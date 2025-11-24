@@ -8,6 +8,9 @@ build/
 # Vite cache
 /.vite/
 
+# Astro cache
+.astro/
+
 # Environment variables (local overrides / secrets)
 .env
 .env.local
