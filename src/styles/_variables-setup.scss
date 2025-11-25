@@ -7,6 +7,10 @@ $text-body:       #e2e8f0; // Slate 200
 $dark:            #1b1e23ff;
 $info-custom:     #05F2F2;
 
+$font-inter: 'Inter', sans-serif;
+$font-roboto-condensend: 'Roboto Condensed', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
 // $primary: #0a23d7;
 // $dark: #00094e;
 // $gray: #d2d5da;
@@ -25,8 +29,8 @@ $body-bg-dark:     $dark-bg-main;
 $body-color-dark:  $text-body;
 
 // custom styles
-$font-family-sans-serif: 'Inter', system-ui, -apple-system, sans-serif;
-$headings-font-family: "Roboto Condensed", sans-serif;
+$headings-font-family: $font-inter;
+$font-family-sans-serif: $font-roboto;
 $card-bg: $dark;
 $card-border-radius: 1rem;
 $card-inner-border-radius: 1rem;
