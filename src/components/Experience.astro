@@ -1,25 +1,21 @@
 ---
 const md = [
   {
-    title: "TrainHub",
-    tags: ["Serverless", "EdTech"],
-    description:
-      "Plataforma para gestión de capacitaciones empresariales (LMS) Tecnologías: PHP, Laravel, Vue.js, Vuex, Bootstrap, MariaDB, AWS S3, SCORM, Go.",
+    title: "Plataforma para capacitaciones online",
+    tags: ["Laravel", "MariaDB", "APIs REST", "Queues", "SCORM"],
+    description: "Desarrolle APIs robustas con Laravel optimizando consultas SQL complejas para reportes masivos, reduciendo el tiempo de generación de forma considerable. Utilice Laravel Queues para procesamiento asíncrono (importación/exportación de datos). Frontend con Vue.js 2 y manejo del estado con Vuex.",
     features: ["Laravel Queues", "Dashboards Analytics", "Integración SCORM"],
   },
   {
     title: "Sistema de Gestión Académica",
-    tags: ["Serverless", "EdTech"],
-    description:
-      "Plataforma para gestión de capacitaciones empresariales (LMS) Tecnologías: PHP, Laravel, Vue.js, Vuex, Bootstrap, MariaDB, AWS S3, SCORM, Go.",
+    tags: ["Serverless", "Node.js", "AWS CDK", "DynamoDB"],
+    description: "Colaboré en el diseño e implementación de la infraestructura serverless con AWS CDK para manejar miles de aplicaciones diarias utilizando Node y Lambda functions. Asegurando la calidad con Jest y pruebas de integración",
     features: ["Laravel Queues", "Dashboards Analytics", "Integración SCORM"],
   },
   {
-    title:
-      "Plataforma para gestión de ventas y el control de inventario (EPOS)",
-    tags: ["Serverless", "EdTech"],
-    description:
-      "Plataforma para gestión de capacitaciones empresariales (LMS) Tecnologías: PHP, Laravel, Vue.js, Vuex, Bootstrap, MariaDB, AWS S3, SCORM, Go.",
+    title: "Plataforma para gestión de ventas y el control de inventario (EPOS)",
+    tags: ["Fast API", "React", "Redux Toolkit", "Radix UI"],
+    description: "Desarrollo Full Stack. Backend con Fast API (Python). Frontend con React y RadixUI/Tailwind CSS, implementando un diseño de componentes reutilizables y altamente reactivos. Gestión de estado avanzada con Redux Toolkit y TanStack Query para peticiones eficientes.",
     features: ["Laravel Queues", "Dashboards Analytics", "Integración SCORM"],
   },
 ];
@@ -27,15 +23,10 @@ const md = [
 const ingenia = [
   {
     title: "Landing Pages",
-    tags: ["Bootstrap", "JavaScript"],
-    description: "Desarrollo landing pages para startups locales y nacionales utilizando themas personalizados basados en Bootstrap e integre animaciones con JavaScript. ",
-    features: ["CEO", "HTML", "CSS", "Responsive"],
-  },
-  {
-    title: "Wordpress Themes",
-    tags: ["WordPress", "JQuery", "PHP"],
-    description: "Cree themas personalizados para WordPress ademas de integrar algunos plugins para la gestion de contenido.",
-    features: ["Customization", "Responsive"],
+    tags: ["HTML", "CSS", "JavaScript", "Responsive web design"],
+    description:
+    "Desarrolle landing pages y SPA's para startups nacionales utilizando temas personalizados basados en Bootstrap, optimizados para SEO y dispositibos mobiles.",
+    features: ["Bootstrap", "JavaScript"],
   },
 ];
 ---
@@ -43,7 +34,7 @@ const ingenia = [
 <div>
   <section class="py-5">
     <div class="container my-5">
-      <h2 class="text-center fw-bold display-5 mb-5">Experience</h2>
+      <h2 class="text-center fw-bold display-5 mb-5">Experiencia professional</h2>
       <div class="row mb-5">
         <div class="col-12 col-md-4 rounded p-5">
           <img
@@ -78,22 +69,22 @@ const ingenia = [
                   <li class="list-group-item">
                     <div class="d-flex justify-content-md-between align-items-center py-2">
                       <h5 class="text-primary m-0">{item.title}</h5>
-                      <div class="d-flex gap-2">
-                        {item.tags.map((tag) => (
-                          <span class="badge bg-primary mb-1">{tag}</span>
-                        ))}
-                        {/* <span class="badge bg-dark mb-1">EdTech</span> */}
-                      </div>
                     </div>
                     <p>{item.description}</p>
-                    <ul class="d-flex gap-3 list-unstyled small text-secondary">
+                    {/* <ul class="d-flex gap-3 list-unstyled small text-secondary">
                       {item.features.map((feature) => (
                         <li class="mb-2">
                           <i class="bi bi-check-circle-fill text-success me-2" />
                           {feature}
                         </li>
                       ))}
-                    </ul>
+                    </ul> */}
+                    <div class="d-flex gap-2">
+                      {item.tags.map((tag) => (
+                        <span class="badge bg-primary mb-1 fw-bold">{tag}</span>
+                      ))}
+                      {/* <span class="badge bg-dark mb-1">EdTech</span> */}
+                    </div>
                   </li>
                 ))
               }
@@ -121,7 +112,8 @@ const ingenia = [
         <div class="col-12 col-md-8">
           <div class="spotlight-card card p-5">
             <p class="mb-4">
-              Como Web Developer mis actividades principales fueron enfocadas al frontend. Estos son algunos de los projectos que me permitieron dominar las tecnologías principales y comprender los fundamentos del desarrollo Web.
+              Como Web Developer mis actividades principales fueron enfocadas al
+              frontend. Aqui pude poner a prueba mis conocimiento en HTML, CSS y JavaScript lo que me permitio comprender los fundamentos del desarrollo Web.
             </p>
 
             <ul class="list-group border-primary list-group-flush">
@@ -130,22 +122,13 @@ const ingenia = [
                   <li class="list-group-item">
                     <div class="d-flex justify-content-md-between align-items-center py-2">
                       <h5 class="text-primary m-0">{item.title}</h5>
+                    </div>
+                    <p>{item.description}</p>
                       <div class="d-flex gap-2">
                         {item.tags.map((tag) => (
                           <span class="badge bg-primary mb-1">{tag}</span>
                         ))}
-                        {/* <span class="badge bg-dark mb-1">EdTech</span> */}
                       </div>
-                    </div>
-                    <p>{item.description}</p>
-                    <ul class="d-flex gap-3 list-unstyled small text-secondary">
-                      {item.features.map((feature) => (
-                        <li class="mb-2">
-                          <i class="bi bi-check-circle-fill text-success me-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
                   </li>
                 ))
               }

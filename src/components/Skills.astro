@@ -1,87 +1,63 @@
 ---
+
+const cards = [
+  {
+    title: "Frontend intuitivo, responsivo y funcional",
+    icon: "bi-layers",
+    text: "Construyó el UI completo de aplicaciones multiplataforma asegurando que la experiencia del usuario sea fluida.",
+  },
+  {
+    title: "Back-end de alto rendimiento",
+    icon: "bi-hdd-network",
+    text: "Desarrollo APIs RESTful con Laravel (PHP) y NestJS (Node.js) optimizando consultas SQL y manejo de grandes volúmenes de datos (MariaDB, PostgreSQL, DynamoDB).",
+  },
+  {
+    title: "Calidad y Testing (QA)",
+    icon: "bi-shield-check",
+    text: "Me gusta escribir código limpio bajo estándares (SOLID, patrones de diseño) e implementación de Testing Automatizado Exhaustivo (E2E/Unitario).",
+  },
+  {
+    title: "Visión 360º & Liderazgo",
+    icon: "bi-people",
+    text: "Mi experiencia incluye la definición de soluciones técnicas, la adopción de buenas prácticas y la mentoría de equipos para elevar la calidad y velocidad de entrega.",
+  },
+]
 ---
 
 <section class="container py-5">
   <h2 class="display-5 fw-bold my-5 text-center text-info text-glow">
-    Value proposition
+    Propuesta de valor
   </h2>
 
-  <div class="row justify-content-md-between py-5">
-    <div class="col-12 col-md-6">
+  <div class="row justify-content-center py-5">
+    <div class="col-12 col-md-7 text-center mb-5">
+      <p class="fs-5 text-opacity-75">
+        Domino un stack potente basado en Laravel (PHP), NestJS (Node.js) y React/TypeScript, con la capacidad de trabajar con bases de datos relacionales y NoSQL, y de implementar arquitecturas Serverless (AWS CDK) para garantizar la máxima escalabilidad.
+
+      </p>
+      <p class="fs-5 text-opacity-75">
+        Si su proyecto requiere un ingeniero que combine solidez técnica, visión de arquitectura y obsesión por la calidad, estoy listo para dedicarle compromiso total y generar un impacto inmediato en su equipo.
+      </p>
+    </div>
+    <div class="col-12 col-md-12">
       <div class="row g-3">
-        <div class="col-sm-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <i class="bi bi-layers fs-1 text-primary mb-3 d-block"></i>
-              <h5 class="card-title">Visión 360º</h5>
-              <p class="card-text small text-muted">
-                Desde la abstracción del negocio hasta el despliegue en
-                producción.
-              </p>
+        {
+          cards.map(card => (
+            <div class="col-sm-3">
+              <div class="card tilt-card spotlight-card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <i class={`bi fs-1 text-primary mb-3 d-block ${card.icon}`}></i>
+                  <h5 class="card-title text-info fw-bold">{ card.title }</h5>
+                  <p class="card-text small text-opacity-75">
+                    { card.text }
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <i
-                class="bi bi-hdd-network fs-1 text-primary mb-3 d-block"
-              ></i>
-              <h5 class="card-title">Arquitectura</h5>
-              <p class="card-text small text-muted">
-                Diseño sistemas pensando en el crecimiento y la
-                escalabilidad futura.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <i
-                class="bi bi-shield-check fs-1 text-primary mb-3 d-block"
-              ></i>
-              <h5 class="card-title">Calidad (QA)</h5>
-              <p class="card-text small text-muted">
-                Testing automatizado (E2E/Unit) y código limpio como
-                estándar.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <i class="bi bi-people fs-1 text-primary mb-3 d-block"></i>
-              <h5 class="card-title">Mentoría</h5>
-              <p class="card-text small text-muted">
-                Guío equipos técnicos para mejorar la velocidad y calidad de
-                entrega.
-              </p>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </div>
     </div>
-    <div class="col-12 col-md-5">
-      <p class="fs-5 text-opacity-75">
-        Mi valor no reside solo en el código, sino en la entrega de
-        soluciones de principio a fin que impulsan la eficiencia del
-        negocio.
-      </p>
-      <p class="text-opacity-75">
-        Domino un stack potente basado en Laravel (PHP), NestJS (Node.js) y
-        React/TypeScript, con la capacidad de trabajar con bases de datos
-        relacionales y NoSQL, y de implementar arquitecturas Serverless (AWS
-        CDK) para garantizar la máxima escalabilidad.
-      </p>
 
-      <p>
-        Si su proyecto requiere un ingeniero que combine solidez técnica,
-        visión de arquitectura y obsesión por la calidad, estoy listo para
-        dedicarle compromiso total y generar un impacto inmediato en su
-        equipo.
-      </p>
-    </div>
   </div>
 </section>
