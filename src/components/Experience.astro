@@ -34,9 +34,9 @@ const ingenia = [
 <div>
   <section class="py-5">
     <div class="container my-5">
-      <h2 class="text-center fw-bold display-5 mb-5">Experiencia professional</h2>
+      <h2 class="text-center fw-bold display-3 mb-5">Experiencia professional</h2>
       <div class="row mb-5">
-        <div class="col-12 col-md-4 rounded p-5">
+        <div class="col-12 col-md-4 rounded p-5 text-center text-md-start">
           <img
             class="img-fluid w-25 rounded-circle mb-3"
             src="/images/logo-md.jpeg"
@@ -53,7 +53,7 @@ const ingenia = [
           </a>
         </div>
         <div class="col-12 col-md-8">
-          <div class="card spotlight-card p-5">
+          <div class="card spotlight-card p-3 p-md-5">
             <p class="mb-4">
               Como Full Stack Developer participé en el desarrollo de múltiples
               proyectos en los cuales puse a prueba mis conocimientos y mi
@@ -79,7 +79,7 @@ const ingenia = [
                         </li>
                       ))}
                     </ul> */}
-                    <div class="d-flex gap-2">
+                    <div class="d-flex flex-wrap gap-2">
                       {item.tags.map((tag) => (
                         <span class="badge bg-primary mb-1 fw-bold">{tag}</span>
                       ))}
@@ -93,7 +93,7 @@ const ingenia = [
         </div>
       </div>
       <div class="row">
-        <div class="col-12 col-md-4 rounded p-5">
+        <div class="col-12 col-md-4 rounded p-5 text-center text-md-start">
           <img
             class="img-fluid w-25 rounded-circle mb-3"
             src="/images/logo-ingenia.png"
@@ -110,7 +110,7 @@ const ingenia = [
           </a>
         </div>
         <div class="col-12 col-md-8">
-          <div class="spotlight-card card p-5">
+          <div class="spotlight-card card p-3 p-md-5">
             <p class="mb-4">
               Como Web Developer mis actividades principales fueron enfocadas al
               frontend. Aqui pude poner a prueba mis conocimiento en HTML, CSS y JavaScript lo que me permitio comprender los fundamentos del desarrollo Web.
@@ -124,7 +124,7 @@ const ingenia = [
                       <h5 class="text-primary m-0">{item.title}</h5>
                     </div>
                     <p>{item.description}</p>
-                      <div class="d-flex gap-2">
+                      <div class="d-flex flex-wrap gap-2">
                         {item.tags.map((tag) => (
                           <span class="badge bg-primary mb-1">{tag}</span>
                         ))}
