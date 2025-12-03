@@ -1,36 +1,40 @@
 ---
-import CardProject from './CardProject.astro';
+import CardProject from "./CardProject.astro";
 
 const projects = [
   {
-    title: 'Artisan App',
-    description: 'Aplicación móvil para manejar la venta de productos, desarrollada con React Native y Expo.',
-    tags: ['React Native', 'Tailwind'],
-    image: 'https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg',
-    link: 'https://github.com/AlexByte18/artisan-app'
+    title: "Artisan App",
+    description:
+      "Aplicación móvil para manejar la venta de productos, desarrollada con React Native y Expo.",
+    tags: ["React Native", "Tailwind"],
+    image: "https://images.pexels.com/photos/8761047/pexels-photo-8761047.jpeg",
+    link: "https://github.com/AlexByte18/artisan-app",
   },
   {
-    title: 'Artisan API',
-    description: 'Una API REST robusta creada con NestJS y TypeORM para gestionar productos, autenticación y mensajería en tiempo real con WebSockets.',
-    tags: ['Nest.js', 'Typescript'],
-    image: '/images/artisan-api-banner.png',
-    link: 'https://github.com/AlexByte18/artisan-api'
+    title: "Artisan API",
+    description:
+      "Una API REST robusta creada con NestJS y TypeORM para gestionar productos, autenticación y mensajería en tiempo real con WebSockets.",
+    tags: ["Nest.js", "Typescript"],
+    image: "/images/artisan-api-banner.png",
+    link: "https://github.com/AlexByte18/artisan-api",
   },
   {
-    title: 'Artisan Dashboard',
-    description: 'Panel de control administrativo moderno para la gestión de productos. Creado con React 19, TypeScript, Tailwind CSS y Vite.',
-    tags: ['React', 'Radix UI', 'Zustand'],
-    image: '/images/artisan-dashboard.png',
-    link: 'https://github.com/AlexByte18/artisan-dashboard'
+    title: "Artisan Dashboard",
+    description:
+      "Panel de control administrativo moderno para la gestión de productos. Creado con React 19, TypeScript, Tailwind CSS y Vite.",
+    tags: ["React", "Radix UI", "Zustand"],
+    image: "/images/artisan-dashboard.png",
+    link: "https://github.com/AlexByte18/artisan-dashboard",
   },
 ];
-
 ---
 
 <section class="container py-5">
   <div class="row mb-5">
-    <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center p-auto p-md-5">
-      <h2 class="display-3 text-center fw-bold mb-5">Projectos</h2>
+    <div
+      class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center p-auto p-md-5"
+    >
+      <h2 class="display-3 text-center fw-bold mb-5">Proyectos</h2>
       <CardProject class="mb-3 mb-md-0" project={projects[0]} />
     </div>
 
@@ -41,40 +45,69 @@ const projects = [
   </div>
 </section>
 
-
-<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-      <div class="col-lg-7 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3 text-info">Conversemos sobre tu próximo proyecto.</h1>
-        <p class="col-lg-10 fs-4">Siempre estoy disponible para discutir nuevas oportunidades de empleo, proyectos freelance o colaboraciones técnicas. Utiliza el formulario o contáctame directamente a través de mis canales profesionales.</p>
-      </div>
-      <div class="col-md-10 mx-auto col-lg-5">
-        <form
-          class="p-4 p-md-5 rounded-3 spotlight-card shadow-lg"
-          name="contact"
-          method="POST"
-          data-netlify-recaptcha="true"
-          data-netlify="true"
+<div class="container px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-12 col-md-7 text-center text-lg-start mb-5 mb-md-0">
+      <h1 class="display-4 fw-bold lh-1 mb-3 text-info">
+        Conversemos sobre tu próximo proyecto.
+      </h1>
+      <p class="col-lg-10 fs-4">
+        Siempre estoy disponible para discutir nuevas oportunidades de empleo,
+        proyectos freelance o colaboraciones técnicas. Utiliza el formulario o
+        contáctame directamente a través de mis canales profesionales.
+      </p>
+    </div>
+    <div class="col-12 col-md-5">
+      <form
+        class="p-4 p-md-5 rounded-3 spotlight-card shadow-lg"
+        name="contact"
+        method="POST"
+        data-netlify-recaptcha="true"
+        data-netlify="true"
+      >
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Nombre"
+            id="nameInput"
+            required
+          />
+          <label for="nameInput">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="name@example.com"
+            id="emailInput"
+            required
+          />
+          <label for="emailInput">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea
+            name="message"
+            class="form-control"
+            placeholder="Message"
+            id="messageInput"
+            style="height: 100px"
+            required></textarea>
+          <label for="messageInput">Mensaje</label>
+        </div>
+        <div
+          class="form-floating mb-3 bg-white rounded d-flex justify-content-center"
         >
-          <div class="form-floating mb-3">
-            <input type="text" name="name" class="form-control" placeholder="Nombre" id="nameInput">
-            <label for="nameInput">Nombre</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="email" name="email" class="form-control" placeholder="name@example.com" id="emailInput">
-            <label for="emailInput">Email</label>
-          </div>
-          <div class="form-floating mb-3">
-            <textarea name="message" class="form-control" placeholder="Message" id="messageInput" style="height: 100px"></textarea>
-            <label for="messageInput">Mensaje</label>
-          </div>
-          <div class="form-floating mb-3">
-            <div data-netlify-recaptcha="true"></div>
-          </div>
-          <button class="w-100 btn btn-lg btn-primary" type="submit">Enviar</button>
-          <!-- <hr class="my-4">
+          <div data-netlify-recaptcha="true"></div>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit"
+          >Enviar</button
+        >
+        <!-- <hr class="my-4">
           <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> -->
-        </form>
-      </div>
+      </form>
     </div>
   </div>
+</div>
