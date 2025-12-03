@@ -3,7 +3,6 @@ import './banner.js'
 import './cards.js'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import initThree from './three-scene'
 import initAtom from './atom'
 
 document.addEventListener('DOMContentLoaded', () => {
