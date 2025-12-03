@@ -10,22 +10,21 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Alex Garcia - Full Stack Developer">
-  <div>
+  <div class="finisher-header">
     <div class="container">
       <Header />
       <Hero />
     </div>
-  </div>
 
   <About />
   <Skills />
   <Experience />
   <Projects />
+  </div>
   <Footer />
 
   <script>
     // Initialize other scripts
     import('../js/main.js').catch(err => console.error('Error loading main.js:', err));
-    import('../js/three-scene.js').catch(err => console.error('Error loading three-scene.js:', err));
   </script>
 </Layout>
