@@ -3,18 +3,56 @@ import '../styles/custom.scss';
 
 interface Props {
   title?: string;
+  description?: string;
+  image?: string;
+  type?: string;
 }
 
-const { title = 'Alex Garcia - Full Stack Developer' } = Astro.props;
+const {
+  title = 'Alex Garcia - Full Stack Developer | Laravel, NestJS, React/TypeScript',
+  description = 'Ingeniero de Software Full-Stack Senior con 6 años de experiencia. Especialista en Laravel, NestJS, React/TypeScript. Desarrollo de APIs RESTful, optimización de bases de datos y soluciones escalables.',
+  image = '/images/artisaan.dev.jpeg',
+  type = 'website'
+} = Astro.props;
+
+const siteURL = Astro.site || 'https://artisaan.dev';
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="es" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
 
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Full Stack Developer, Laravel, NestJS, React, TypeScript, Desarrollo Web, Ingeniero de Software, API REST, PostgreSQL, MongoDB, React Native" />
+    <meta name="author" content="Alex Garcia" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, canonicalURL).href} />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, canonicalURL).href} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Roboto+Condensed:wght@100..900&family=Source+Code+Pro:wght@200..900&display=swap" rel="stylesheet">
@@ -22,6 +60,37 @@ const { title = 'Alex Garcia - Full Stack Developer' } = Astro.props;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alex Garcia",
+      "jobTitle": "Full Stack Developer",
+      "description": description,
+      "url": canonicalURL.href,
+      "image": new URL(image, canonicalURL).href,
+      "sameAs": [
+        "https://github.com/AlexByte18",
+        "https://www.linkedin.com/in/alex-garcia-802683125/",
+      ],
+      "email": "alex.g.cortes.g@gmail.com",
+      "knowsAbout": [
+        "Laravel",
+        "NestJS",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB",
+        "API REST",
+        "Full Stack Development"
+      ],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Ingeniería de Software"
+      }
+    })} />
   </head>
   <body>
     <slot />

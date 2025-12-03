@@ -24,6 +24,9 @@ const { project, class: className } = Astro.props;
   <img
     src={ project.image }
     class="card-img-bottom"
-    alt={ project.title }
+    alt={`Captura de pantalla del proyecto ${project.title}`}
+    loading="lazy"
+    width="800"
+    height="450"
   />
 </a>
